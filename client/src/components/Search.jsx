@@ -12,11 +12,11 @@ const Search = () => {
   const match = useMatch("/");
   const navigate = useNavigate();
 
-  console.log(input)
+
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(searched(input));
-    // console.log(dispatch(searched(input)))
+    console.log(dispatch(searched(input)))
 
     if (!match) {
       navigate("/");

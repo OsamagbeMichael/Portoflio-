@@ -30,14 +30,15 @@ const CategoryList = () => {
           </a>
         </li>
         <li
-          className={`px-1 py-4 border-b border-t border-white hover:border-gray-200 transition duration-300     ${
-            isTagSelected("Startups") ? "selected bg-indigo-300 rounded" : ""
-          }`}
+          className={`px-1 py-4 border-b border-t border-white hover:border-gray-200 transition duration-300     ${isTagSelected("Startups") ? "selected bg-indigo-300 rounded" : ""
+            }`}
         >
           <a
             onClick={() => dispatch(tagSelected("Startups"))}
+
             className="flex items-center text-gray-600 cursor-pointer"
           >
+
             <span className="inline-block h-4 w-4 bg-indigo-300 mr-3"></span>
             Startups
             <span className="text-gray-500 ml-auto">18 articles</span>
@@ -45,9 +46,8 @@ const CategoryList = () => {
           </a>
         </li>
         <li
-          className={`px-1 py-4 border-b border-t border-white hover:border-gray-200 transition duration-300 ${
-            isTagSelected("Tech") ? "selected bg-indigo-300 rounded" : ""
-          }`}
+          className={`px-1 py-4 border-b border-t border-white hover:border-gray-200 transition duration-300 ${isTagSelected("Tech") ? "selected bg-indigo-300 rounded" : ""
+            }`}
         >
           <a
             onClick={() => dispatch(tagSelected("Tech"))}
@@ -60,9 +60,8 @@ const CategoryList = () => {
           </a>
         </li>
         <li
-          className={`px-1 py-4 border-b border-t border-white hover:border-gray-200 transition duration-300 ${
-            isTagSelected("Apps") ? "selected bg-indigo-300 rounded" : ""
-          } `}
+          className={`px-1 py-4 border-b border-t border-white hover:border-gray-200 transition duration-300 ${isTagSelected("Apps") ? "selected bg-indigo-300 rounded" : ""
+            } `}
         >
           <a
             onClick={() => dispatch(tagSelected("Apps"))}

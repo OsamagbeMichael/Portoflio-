@@ -4,6 +4,8 @@ import blogReducer from './features/singleBlog/blogSlice'
 import filterReducer from './features/filter/filterSlice'
 import relatedBlogsReducer from './features/relatedBlogs/relatedBlogsSlice'
 
+
+
 export const store = configureStore({
   reducer: {
     blogs: blogsReducer,
