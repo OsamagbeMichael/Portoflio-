@@ -7,10 +7,12 @@ const Search = () => {
   const dispatch = useDispatch();
   const { search } = useSelector((state) => state.filter);
   const [input, setInput] = useState(search);
+  const [category, setCategory] = useState('');
 
   const match = useMatch("/");
   const navigate = useNavigate();
 
+  console.log(input)
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(searched(input));
@@ -21,7 +23,7 @@ const Search = () => {
     }
     setInput("")
   };
-  console.log(search)
+  // console.log(search)
   return (
     <form onSubmit={handleSubmit} className="relative flex items-center h-12 rounded-lg focus-within:shadow-lg bg-white overflow-hidden">
       <div className="grid place-items-center h-full w-24 text-gray-300">

@@ -7,6 +7,7 @@ const Home = () => {
   return (
     <div className="">
       <Banner/>
+      
 
       <div className="block lg:flex lg:space-x-2 px-2 lg:p-0 mt-10 mb-10">
         {/* post cards */}

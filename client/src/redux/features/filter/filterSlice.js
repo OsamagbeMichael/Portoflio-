@@ -10,7 +10,7 @@ const filterSlice = createSlice({
     initialState,
     reducers: {
         tagSelected: (state, action) => {
-            state.tags=[action.payload];
+            state.tags = [action.payload];
         },
         searched: (state, action) => {
             state.search = action.payload;

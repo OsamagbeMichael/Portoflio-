@@ -3,11 +3,15 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchBlogs } from '../../redux/features/blogs/blogsSlice';
 import Card from './Card';
 
+
 const PostCards = () => {
   const dispatch = useDispatch();
   const { blogs, isLoading, isError, error } = useSelector((state) => state.blogs);
 
+
+
   const { tags, search } = useSelector((state) => state.filter);
+  console.log(tags, search)
 
   const [currentPage, setCurrentPage] = useState(1);
   const blogsPerPage = 5;
@@ -18,14 +22,23 @@ const PostCards = () => {
 
 
 
+
   const paginatedBlogs = blogs.slice((currentPage - 1) * blogsPerPage, currentPage * blogsPerPage);
 
   const handlePageChange = (newPage) => {
     setCurrentPage(newPage);
   };
 
+  const handleCategoryChange = (category) => {
+    setSelectedCategory(category);
+    setCurrentPage(1);
+  }
+
   return (
     <div className="w-full lg:w-2/3">
+
+
+
       {/* single cards */}
       {!isError && !isLoading && paginatedBlogs?.length > 0 ? (
         <div>
